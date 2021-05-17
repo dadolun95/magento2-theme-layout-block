@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Controller\Adminhtml\Block;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
@@ -28,7 +29,8 @@ class NewAction extends \Magento\Backend\App\Action implements HttpGetActionInte
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
-    ) {
+    )
+    {
         $this->resultForwardFactory = $resultForwardFactory;
         parent::__construct($context);
     }

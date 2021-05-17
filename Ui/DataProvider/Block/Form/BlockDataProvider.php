@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Ui\DataProvider\Block\Form;
 
 use Dadolun\ThemeLayoutBlock\Model\ResourceModel\ThemeLayoutBlock\CollectionFactory;
@@ -40,7 +41,8 @@ class BlockDataProvider extends AbstractDataProvider
         PoolInterface $pool,
         array $meta = [],
         array $data = []
-    ) {
+    )
+    {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
         $this->pool = $pool;

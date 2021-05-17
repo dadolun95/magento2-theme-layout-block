@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Controller\Adminhtml\Block;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
@@ -41,7 +42,8 @@ class Delete extends \Magento\Backend\App\Action implements HttpGetActionInterfa
         Action\Context $context,
         DataPersistorInterface $dataPersistor,
         ThemeLayoutBlockRepositoryInterface $themeLayoutBlockRepository
-    ) {
+    )
+    {
         $this->dataPersistor = $dataPersistor;
         $this->themeLayoutBlockRepository = $themeLayoutBlockRepository;
         parent::__construct($context);

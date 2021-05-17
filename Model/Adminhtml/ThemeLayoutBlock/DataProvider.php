@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Model\Adminhtml\ThemeLayoutBlock;
 
 use Dadolun\ThemeLayoutBlock\Model\ResourceModel\ThemeLayoutBlock\CollectionFactory;
@@ -50,7 +51,8 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         DataPersistorInterface $dataPersistor,
         array $meta = [],
         array $data = []
-    ) {
+    )
+    {
         $this->dataPersistor = $dataPersistor;
         $this->collection = $contactCollectionFactory->create();
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);

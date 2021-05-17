@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Controller\Adminhtml\Block;
 
 use Magento\Backend\App\Action;
@@ -30,7 +31,8 @@ class Index extends Action
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory
-    ) {
+    )
+    {
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
     }

@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Controller\Adminhtml\Block;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
@@ -66,7 +67,8 @@ class Edit extends \Magento\Backend\App\Action implements HttpGetActionInterface
         ThemeLayoutBlockInterfaceFactory $themeLayoutBlockInterfaceFactory,
         \Magento\Framework\Registry $registry,
         \Magento\Store\Model\StoreManagerInterface $storeManager = null
-    ) {
+    )
+    {
         parent::__construct($context);
         $this->registry = $registry;
         $this->resultPageFactory = $resultPageFactory;
@@ -83,7 +85,7 @@ class Edit extends \Magento\Backend\App\Action implements HttpGetActionInterface
      */
     public function execute()
     {
-        $themeLayoutBlockId = (int) $this->getRequest()->getParam('row_id');
+        $themeLayoutBlockId = (int)$this->getRequest()->getParam('row_id');
         if ($themeLayoutBlockId) {
             try {
                 $themeLayoutBlock = $this->themeLayoutBlockRepository->getById($themeLayoutBlockId);

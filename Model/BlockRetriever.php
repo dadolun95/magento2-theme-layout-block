@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Model;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
@@ -71,7 +72,7 @@ class BlockRetriever implements BlockRetrieverInterface
         $blockContent = '';
         try {
             $layoutHandles = $block->getLayout()->getUpdate()->getHandles();
-            foreach($layoutHandles as $layoutHandle) {
+            foreach ($layoutHandles as $layoutHandle) {
                 $tmpBlockContent = $this->getBlockByLayoutHandle($code, $layoutHandle);
                 if ($tmpBlockContent !== '') {
                     $blockContent = $tmpBlockContent;
@@ -89,7 +90,8 @@ class BlockRetriever implements BlockRetrieverInterface
      * @return string|null
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    private function getBlockByLayoutHandle($code, $layoutHandle) {
+    private function getBlockByLayoutHandle($code, $layoutHandle)
+    {
         $themeLayoutBlocks = $this->themeLayoutBlockRepository->getByCodeAndLayoutHandle($code, $layoutHandle);
         $currentStoreId = $this->storeManager->getStore()->getId();
         foreach ($themeLayoutBlocks as $themeLayoutBlock) {

@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Ui\DataProvider;
 
 use Dadolun\ThemeLayoutBlock\Model\ResourceModel\ThemeLayoutBlock\CollectionFactory;
@@ -62,7 +63,8 @@ class Block extends \Magento\Ui\DataProvider\AbstractDataProvider
         array $meta = [],
         array $data = [],
         PoolInterface $modifiersPool = null
-    ) {
+    )
+    {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
         $this->addFieldStrategies = $addFieldStrategies;

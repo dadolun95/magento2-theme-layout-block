@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Model;
 
 use Magento\Framework\Exception\CouldNotSaveException;
@@ -19,7 +20,8 @@ use \Dadolun\ThemeLayoutBlock\Model\ResourceModel\ThemeLayoutBlock\CollectionFac
  * Class ThemeLayoutBlockRepository
  * @package Dadolun\ThemeLayoutBlock\Model
  */
-class ThemeLayoutBlockRepository implements ThemeLayoutBlockRepositoryInterface {
+class ThemeLayoutBlockRepository implements ThemeLayoutBlockRepositoryInterface
+{
 
     /**
      * @var \Dadolun\ThemeLayoutBlock\Api\Data\ThemeLayoutBlockInterfaceFactory|ThemeLayoutBlockInterfaceFactory
@@ -46,7 +48,8 @@ class ThemeLayoutBlockRepository implements ThemeLayoutBlockRepositoryInterface 
         \Dadolun\ThemeLayoutBlock\Api\Data\ThemeLayoutBlockInterfaceFactory $themeLayoutBlockFactory,
         ThemeLayoutBlockCollectionFactory $themeLayoutBlockCollectionFactory,
         ThemeLayoutBlockResourceInterface $themeLayoutBlockResource
-    ){
+    )
+    {
         $this->themeLayoutBlockFactory = $themeLayoutBlockFactory;
         $this->themeLayoutBlockCollectionFactory = $themeLayoutBlockCollectionFactory;
         $this->themeLayoutBlockResource = $themeLayoutBlockResource;
@@ -112,7 +115,7 @@ class ThemeLayoutBlockRepository implements ThemeLayoutBlockRepositoryInterface 
     {
         try {
             $this->themeLayoutBlockResource->delete($themeLayoutBlock);
-        }  catch (\Exception $e) {
+        } catch (\Exception $e) {
             throw new \Magento\Framework\Exception\StateException(
                 __('The "%1" layout block couldn\'t be removed.', $themeLayoutBlock->getId()),
                 $e

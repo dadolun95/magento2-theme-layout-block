@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Setup\Patch\Data;
 
 use Magento\Eav\Setup\EavSetup;
@@ -33,7 +34,8 @@ class AddProductPositionAttributes implements DataPatchInterface
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         EavSetupFactory $eavSetupFactory
-    ) {
+    )
+    {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->eavSetupFactory = $eavSetupFactory;
     }

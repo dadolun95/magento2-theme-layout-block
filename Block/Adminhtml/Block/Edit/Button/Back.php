@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Block\Adminhtml\Block\Edit\Button;
 
 /**
@@ -26,6 +27,7 @@ class Back extends Generic
             'sort_order' => 10
         ];
     }
+
     /**
      * @return string
      */

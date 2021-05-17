@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Ui\Component\Listing\Column;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
@@ -37,7 +38,8 @@ class EditAction extends Column
         UrlInterface $urlBuilder,
         array $components = [],
         array $data = []
-    ) {
+    )
+    {
         $this->urlBuilder = $urlBuilder;
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }

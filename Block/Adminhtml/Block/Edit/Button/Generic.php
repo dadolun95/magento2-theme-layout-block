@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Block\Adminhtml\Block\Edit\Button;
 
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -45,7 +46,8 @@ class Generic implements ButtonProviderInterface
         Context $context,
         WidgetContext $widgetContext,
         ThemeLayoutBlockRepositoryInterface $themeLayoutBlockRepository
-    ) {
+    )
+    {
         $this->context = $context;
         $this->widgetContext = $widgetContext;
         $this->themeLayoutBlockRepository = $themeLayoutBlockRepository;
@@ -58,13 +60,13 @@ class Generic implements ButtonProviderInterface
      */
     public function getBlockId()
     {
-       if ($this->widgetContext->getRequest()->getParam('row_id')) {
-           try {
-               return $this->themeLayoutBlockRepository->getById(
-                   $this->widgetContext->getRequest()->getParam('row_id')
-               )->getId();
-           } catch (NoSuchEntityException $e) {
-           }
+        if ($this->widgetContext->getRequest()->getParam('row_id')) {
+            try {
+                return $this->themeLayoutBlockRepository->getById(
+                    $this->widgetContext->getRequest()->getParam('row_id')
+                )->getId();
+            } catch (NoSuchEntityException $e) {
+            }
         }
         return null;
     }

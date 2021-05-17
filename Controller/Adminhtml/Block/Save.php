@@ -6,6 +6,7 @@
  * @author    Dadolun
  * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
  */
+
 namespace Dadolun\ThemeLayoutBlock\Controller\Adminhtml\Block;
 
 use Magento\Framework\App\Action\HttpPostActionInterface;
@@ -49,7 +50,8 @@ class Save extends \Magento\Backend\App\Action implements HttpPostActionInterfac
         DataPersistorInterface $dataPersistor,
         ThemeLayoutBlockInterfaceFactory $themeLayoutBlockFactory,
         ThemeLayoutBlockRepositoryInterface $themeLayoutBlockRepository
-    ) {
+    )
+    {
         $this->dataPersistor = $dataPersistor;
         $this->themeLayoutBlockFactory = $themeLayoutBlockFactory;
         $this->themeLayoutBlockRepository = $themeLayoutBlockRepository;
