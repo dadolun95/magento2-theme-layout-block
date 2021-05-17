@@ -1,0 +1,20 @@
+{
+  "name": "dadolun95/magento2-theme-layout-block",
+  "description": "Manager that simplifies the insertion of cms blocks in the layout",
+  "require": {
+    "magento/framework": "^103.0.*",
+    "magento/module-cms": "*",
+    "magento/module-theme": "*",
+    "magento/module-catalog": "*"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "autoload": {
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+          "Dadolun\\ThemeLayoutBlock\\": ""
+      }
+  }
+}

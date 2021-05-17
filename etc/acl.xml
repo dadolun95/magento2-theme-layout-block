@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::content">
+                    <resource id="Dadolun_ThemeLayoutBlock::theme_layout_block" title="Theme Layout Block" translate="title" sortOrder="100" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

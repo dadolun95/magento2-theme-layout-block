@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">themelayout_block_listing.themelayout_block_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>themelayout_block_columns</spinner>
+        <deps>
+            <dep>themelayout_block_listing.themelayout_block_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="themelayout_block_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">row_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Dadolun_ThemeLayoutBlock::theme_layout_block</aclResource>
+        <dataProvider class="Dadolun\ThemeLayoutBlock\Ui\DataProvider\Block" name="themelayout_block_listing_data_source">
+            <settings>
+                <requestFieldName>row_id</requestFieldName>
+                <primaryFieldName>row_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filters name="listing_filters">
+            <settings>
+                <templates>
+                    <filters>
+                        <select>
+                            <param name="template" xsi:type="string">ui/grid/filters/elements/ui-select</param>
+                            <param name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</param>
+                        </select>
+                    </filters>
+                </templates>
+            </settings>
+        </filters>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="themelayout_block_columns">
+        <settings>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">themelayout_block_listing.themelayout_block_listing.themelayout_block_columns_editor</item>
+                    <item name="target" xsi:type="string">startEdit</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                        <item name="1" xsi:type="boolean">true</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>
+        <column name="row_id" sortOrder="0">
+            <settings>
+                <addField>true</addField>
+                <filter>text</filter>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <sortable>true</sortable>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="layout_handle" sortOrder="10">
+            <settings>
+                <addField>true</addField>
+                <filter>text</filter>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <sortable>true</sortable>
+                <label translate="true">Layout Handle</label>
+            </settings>
+        </column>
+        <column name="position" sortOrder="20">
+            <settings>
+                <addField>true</addField>
+                <filter>text</filter>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <sortable>true</sortable>
+                <label translate="true">Position</label>
+            </settings>
+        </column>
+        <column name="block_id" sortOrder="30">
+            <settings>
+                <addField>true</addField>
+                <filter>text</filter>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <sortable>true</sortable>
+                <label translate="true">CMS Block ID</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="Dadolun\ThemeLayoutBlock\Ui\Component\Listing\Column\EditAction" sortOrder="50">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="editUrlPath" xsi:type="string">themelayout/block/edit</item>
+                </item>
+            </argument>
+            <settings>
+                <indexField>row_id</indexField>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>

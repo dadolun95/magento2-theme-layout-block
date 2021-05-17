@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Dadolun\ThemeLayoutBlock\Api\Data\ThemeLayoutBlockInterface" type="Dadolun\ThemeLayoutBlock\Model\ThemeLayoutBlock"/>
+    <preference for="Dadolun\ThemeLayoutBlock\Api\ThemeLayoutBlockRepositoryInterface" type="Dadolun\ThemeLayoutBlock\Model\ThemeLayoutBlockRepository"/>
+    <preference for="Dadolun\ThemeLayoutBlock\Api\ThemeLayoutBlockResourceInterface" type="Dadolun\ThemeLayoutBlock\Model\ResourceModel\ThemeLayoutBlock"/>
+</config>

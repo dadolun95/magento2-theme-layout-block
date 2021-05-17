@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">themelayout_block_form.themelayout_block_form_data_source</item>
+            <item name="deps" xsi:type="string">themelayout_block_form.themelayout_block_form_data_source</item>
+        </item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">themelayout_block_form</item>
+            <item name="deps" xsi:type="string">themelayout_block_form.themelayout_block_form_data_source</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save" class="Dadolun\ThemeLayoutBlock\Block\Adminhtml\Block\Edit\Button\Save"/>
+            <button name="back" class="Dadolun\ThemeLayoutBlock\Block\Adminhtml\Block\Edit\Button\Back"/>
+            <button name="delete" class="Dadolun\ThemeLayoutBlock\Block\Adminhtml\Block\Edit\Button\Delete"/>
+        </buttons>
+        <namespace>themelayout_block_form</namespace>
+    </settings>
+    <dataSource name="themelayout_block_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="themelayout/block/save"/>
+        </settings>
+        <dataProvider class="Dadolun\ThemeLayoutBlock\Model\Adminhtml\ThemeLayoutBlock\DataProvider" name="themelayout_block_form_data_source">
+            <settings>
+                <requestFieldName>row_id</requestFieldName>
+                <primaryFieldName>row_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label translate="true">Settings</label>
+        </settings>
+        <field name="row_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">themelayout_block</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>row_id</dataScope>
+            </settings>
+        </field>
+        <field name="layout_handle" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">themelayout_block</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Layout Handle</label>
+                <notice translate="true">Insert the layout handle you want to update. Ex: checkout_index_index or checkout_cart_index</notice>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <dataScope>layout_handle</dataScope>
+            </settings>
+        </field>
+        <field name="position" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">themelayout_block</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Position</label>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <dataScope>position</dataScope>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Dadolun\ThemeLayoutBlock\Model\Attribute\Source\Position"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="block_id" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">themelayout_block</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">CMS Block id</label>
+                <dataType>text</dataType>
+                <visible>true</visible>
+                <dataScope>block_id</dataScope>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Dadolun\ThemeLayoutBlock\Model\Attribute\Source\CmsBlock"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

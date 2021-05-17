@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="design" sortOrder="60">
+        <field name="position_main_top">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">70</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Block for Main Top section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_top_a">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">71</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Block for Top A section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_top_b">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">72</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Block for Top B section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_top_c">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">73</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Block for Top C section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_main_bottom">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">74</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Main Bottom section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_bottom_a">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">75</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Bottom A section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_bottom_b">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">76</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Bottom B section</item>
+                </item>
+            </argument>
+        </field>
+        <field name="position_bottom_c">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">77</item>
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Add CMS Bottom C section</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

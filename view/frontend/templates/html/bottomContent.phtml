@@ -1,0 +1,33 @@
+<?php
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+
+/**
+ * @var \Dadolun\ThemeLayoutBlock\ViewModel\PositionManager $positionManager
+ */
+$positionManager = $block->getData('positionManager');
+
+$positionMainBottom = $positionManager->toHtml('position_main_bottom', $block);
+$positionBottomA = $positionManager->toHtml('position_bottom_a', $block);
+$positionBottomB = $positionManager->toHtml('position_bottom_b', $block);
+$positionBottomC = $positionManager->toHtml('position_bottom_c', $block);
+?>
+
+<?php if ($positionMainBottom !== ''): ?>
+    <?= $positionMainBottom; ?>
+<?php endif; ?>
+<?php if ($positionBottomA !== ''): ?>
+    <?= $positionBottomA; ?>
+<?php endif; ?>
+<?php if ($positionBottomB !== ''): ?>
+    <?= $positionBottomB; ?>
+<?php endif; ?>
+<?php if ($positionBottomC !== ''): ?>
+    <?= $positionBottomC; ?>
+<?php endif; ?>
+

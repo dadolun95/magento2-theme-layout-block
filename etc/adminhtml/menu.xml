@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Dadolun_ThemeLayoutBlock::theme_layout_block" title="Custom Blocks" translate="title" module="Dadolun_ThemeLayoutBlock" sortOrder="100" parent="Magento_Backend::system_design" action="themelayout/block" resource="Dadolun_ThemeLayoutBlock::theme_layout_block"/>
+    </menu>
+</config>

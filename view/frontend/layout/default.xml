@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Dadolun ThemeLayoutBlock
+ *
+ * @package   Dadolun_ThemeLayoutBlock
+ * @author    Dadolun
+ * @copyright Copyright (c) 2021 dadolun@gmail.com (https://github.com/dadolun95)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="top.content.container" before="main.content">
+                <block name="top.content" template="Dadolun_ThemeLayoutBlock::html/topContent.phtml">
+                    <arguments>
+                        <argument name="positionManager" xsi:type="object">Dadolun\ThemeLayoutBlock\ViewModel\PositionManager</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="bottom.content.container" before="footer-container">
+                <block name="bottom.content" template="Dadolun_ThemeLayoutBlock::html/bottomContent.phtml">
+                    <arguments>
+                        <argument name="positionManager" xsi:type="object">Dadolun\ThemeLayoutBlock\ViewModel\PositionManager</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
